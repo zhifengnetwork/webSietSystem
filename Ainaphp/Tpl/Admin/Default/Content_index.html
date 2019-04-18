@@ -102,7 +102,7 @@
 			<td width="40" align='center'><input name='listorders[{$vo.id}]' type='text' size='3' value='{$vo.listorder}' class='input-text-c'></td>
 			<td align="center">{$vo['id']}</td>
       		<td><if condition="$vo['catid']">[<font color="green">{$categorys[$vo['catid']]['catname']}</font>]</if>
-			{if $module_name=='Guestbook' || $module_name=='Feedback'}{$vo['username']}-{$vo['title']}{else}<a href="{$vo.url}" <if condition="$vo['title_style']!=''">style ="{$vo['title_style']}"</if> target="_blank">{$vo['title']} </a>{/if}
+			{if $module_name=='Message'}<a href="{:U($module_name.'/edit',array(id=>$vo['id']))}" >{$vo['title']} </a>{else}<a href="{$vo.url}"  <if condition="$vo['title_style']!=''">style ="{$vo['title_style']}"</if> target="_blank">{$vo['title']} </a>{/if}
 
 			<if condition="$vo['thumb']!=''"><img src="./Public/Images/admin_image.gif"></if>
 			<if condition="$vo['posid']!=0"><img src="./Public/Images/admin_elite.gif"></if></td>
@@ -111,7 +111,7 @@
 			<if condition="$fields['hits']"> <td align="center">{$vo['hits']}</td></if>
       		<td align="center">{$vo['username']}</td>
 
-			<td align="center"><a href="{:U($module_name.'/edit',array(id=>$vo['id']))}">{:L('edit')}</a> | <a href="javascript:confirm_delete('{:U($module_name.'/delete',array(id=>$vo['id']))}')">{:L('delete')}</a></td>
+			<td align="center">{if $module_name=='Message'}<a href="{:U($module_name.'/edit',array(id=>$vo['id']))}">查看</a>{else}<a href="{:U($module_name.'/edit',array(id=>$vo['id']))}">{:L('edit')}</a>{/if} | <a href="javascript:confirm_delete('{:U($module_name.'/delete',array(id=>$vo['id']))}')">{:L('delete')}</a></td>
       		</tr>
       		</volist>
       	</tbody>

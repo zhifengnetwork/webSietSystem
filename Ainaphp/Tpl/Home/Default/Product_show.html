@@ -1,152 +1,187 @@
-
-<!--顶部图片-->
+<!--顶部5555图片-->
 <div class="container-fluid" style="padding: 0">
-    <div class="row" style="margin: 0;">
-        <div class="col-xs-12" style="padding: 0;">
-            {if $Categorys[$bcid][image]}<img src="{$Categorys[$bcid][image]}" alt="banner">{else} <img src="__PUBLIC__/www/image/productTopBg.jpg" alt="" class="img-responsive"/>{/if}
-        </div>
+  <div class="row" style="margin: 0;">
+    <div class="col-xs-12" style="padding: 0;">
+
+      {if $Categorys[$bcid][image]}<img src="{$Categorys[$bcid][image]}" alt="banner">{else} <img
+      src="__PUBLIC__/www/image/productTopBg.jpg" alt="" class="img-responsive"/>{/if}
+
     </div>
+  </div>
 </div>
 
 <div style="background: #efefef">
 
-    <div class="container">
-        <!--标题-->
-        <div class="row" style="margin: 3% 0">
-            <!-- 标题-->
-            <div class="col-xs-12">
-                <div class="row">
-                    <div class="col-xs-4" style="padding: 0">
-                        <span><img src="__PUBLIC__/www/image/productH.png" alt=""/></span>
-                        <span style="font-size: 23px;color: #000;position: relative;top: 5px;font-family: Bold;">PRODUCTS DETAIL</span>
-                    </div>
-                    <!--面包屑-->
-                    <div class="col-xs-8 text-right" style="padding-top: 10px">
-                        <span style="padding-right: 5px"><img src="__PUBLIC__/www/image/productM.png" alt=""/></span>
-                        <span style="color: #666;font-size: 14px">You Location：
-                            <a href="index.php">Home</a> -<YP:catpos catid="catid" space=" - "/>
-                        </span>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <!--标222题-->
+    <div class="row" style="margin: 3% 0">
+      <!-- 标题-->
+      <div class="col-xs-12">
+        <div class="row">
+          <div class="col-xs-12" style="padding: 0">
+            <!--<span><img src="__PUBLIC__/www/image/productH.png" alt=""/></span>-->
+            <a href="/index.php"
+               style="font-size: 23px;color: #000;position: relative;top: 5px;font-family: Bold;">Home</a>
+            <span style="font-size: 23px;color: #000;position: relative;top: 5px;font-family: Bold;"> - <YP:catpos
+              catid="catid" space=" - "/></span>
+          </div>
+          <!--面包屑-->
+          <!--<div class="col-xs-8 text-right" style="padding-top: 10px">-->
+          <!--<span style="padding-right: 5px"><img src="__PUBLIC__/www/image/productM.png" alt=""/></span>-->
+          <!--<span style="color: #666;font-size: 14px">You Location：-->
+          <!--<a href="index.php">Home</a> -<YP:catpos catid="catid" space=" - "/>-->
+          <!--</span>-->
+          <!--</div>-->
         </div>
-
-        <!-- 商品图片-->
-        <div class="row productDetailsSlideConter" style="margin: 5% 0">
-            <div class="col-xs-12" style="padding: 0">
-                <div class="swiper-container gallery-top swiper1 swiper-container-horizontal">
-                    <div class="swiper-wrapper">
-                        
-                         <volist name="pic" id="r" offset="0" length='5' >
-                               <div class="swiper-slide"><img src="{$r.filepath}" alt="" style="max-width: 100%"/></div>
-                         </volist>
-                    </div>
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next swiper-button-white" style="right: 34px;">
-                        <img src="__PUBLIC__/www/image/right.png" alt=""/>
-                    </div>
-                    <div class="swiper-button-prev swiper-button-white" style="left: 0">
-                        <img src="__PUBLIC__/www/image/left.png" alt=""/>
-                    </div>
-                </div>
-
-                <div class="swiper-container gallery-thumbs swiper2 swiper-container-horizontal">
-                    <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
-                        
-                         <volist name="pic" id="r" offset="0" length='5' >
-                             <div class="swiper-slide"><img src="{$r.filepath}" alt="" style="width: 100%"/></div>
-                         </volist>
-                         
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- 商品描述-->
-        <div class="row" style="margin: 0">
-            <div class="col-xs-8" style="margin-bottom: 5%;background: #fff;padding: 0">
-                <!-- product datail-->
-                <div class="productDatailTitle">
-                    <h4>Product Detail</h4>
-                </div>
-                <!-- 内容-->
-                <div class="productDatailContact">
-                    <h1>{$title}</h1>
-                    <h4>{$keywords}</h4>
-                    <br />
-                    <p>{$content}</p>
-                </div>
-                    <!-- 横向虚线-->
-                    <p class="productDetailBottomBorder"></p>
-
-                <!-- 左边文字，右边图片-->
-                <div class="productDatailContact">
-                
-                    {$available_one}
-
-                    <!-- 这个元素勿删-->
-                    <p class="clearfix"></p>
-
-                </div>
-
-                <!-- 横向虚线-->
-                <p class="productDetailBottomBorder"></p>
-
-                <!-- 场景图-->
-                <div class="productDatailContact" style="margin-bottom: 4%">
-                   {$available_two}
-                </div>
-
-            </div>
-
-            <div class="col-xs-4" style="margin-bottom: 5%;background: #fff;padding: 0 0 3% 0;width: 31%;margin-left: 2%">
-                <!-- product datail-->
-                <div class="productDatailTitle">
-                    <h4>Hot Products</h4>
-                </div>
-
-                <!-- 产品一-->
-                <YP:list catid="catid" limit="12" field="*">
-                <div class="row productDatailRightText">
-                    <!-- 产品图片-->
-                    <div class="col-xs-4 productDatailRightTextOne" style=" width:40%;">
-                        <a href="{$r.url}">
-                            <img src="{$r.thumb}" alt="{$r.title}"/>
-                        </a>
-                    </div>
-                    <!-- 产品描述文字-->
-                    <div class="col-xs-8" style="width:60%;">
-                        <h4>{$r.title}</h4>
-                        <p><a href="{$r.url}">{$r.model}</a></p>
-                    </div>
-                </div>
-                  </YP:list>
-               
-
-            </div>
-        </div>
+      </div>
     </div>
-</div>
 
-<script>
+    <!-- 商品图片-->
+    <div class="row productDetailsSlideConter" style="margin: 5% 0">
+      <div class="col-xs-12" style="padding: 0">
+        <div class="swiper-container gallery-top swiper1 swiper-container-horizontal"
+             style=" max-height:400px; background:#FFF;">
+          <div class="swiper-wrapper">
+            <volist name="pic" id="r" offset="0" length='5'>
+              <div class="swiper-slide" style="text-align:center;"><img src="{$r.filepath}" alt="{$title}"
+                                                                        style="max-width: 100%;height: 400px"/></div>
+            </volist>
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next swiper-button-white" style="right: 34px;">
+            <img src="__PUBLIC__/www/image/right.png"/>
+          </div>
+          <div class="swiper-button-prev swiper-button-white" style="left: 34px">
+            <img src="__PUBLIC__/www/image/left.png"/>
+          </div>
+        </div>
+
+        <div class="swiper-container gallery-thumbs swiper2 swiper-container-horizontal"
+             style=" width:80%; margin:auto;">
+          <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+
+            <volist name="pic" id="r" offset="0" length='5'>
+              <div class="swiper-slide"><img src="{$r.filepath}" alt="{$title}" style="width: 100%"/></div>
+            </volist>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 商品描述-->
+    <div class="row" style="margin: 0">
+      <div class="col-xs-12" style="margin-bottom: 5%;background: #fff;padding: 0">
+        <!-- product datail-->
+        <div class="productDatailTitle">
+          <h4>Product Detail</h4>
+        </div>
+        <!-- 内容-->
+        <div class="productDatailContact">
+          <h1>{$title}</h1>
+          <h4>{$keywords}</h4>
+          <br/>
+          <p>{$content}</p>
+        </div>
+
+        <!-- 横向虚线-->
+        <p class="productDetailBottomBorder"></p>
+
+        <div class="col-xs-12" style="margin-bottom: 5%;background: #fff;padding: 0">
+          <!-- product datail-->
+
+
+          <!--产品推荐列表-->
+
+
+          <div class="productDatailTitle">
+            <h4>Recommended products</h4>
+          </div>
+          <!-- 内容-->
+          <div class="productDatailContact">
+
+
+            <div class="row" style="margin-top: 3%">
+            <YP:list catid="catid" limit="4" field="*">
+              <div class="col-xs-3 text-center productList">
+                <!-- 产品图片-->
+                <p class="productListP">
+                  <a href="{$r.url}"><img src="{$r.thumb}" alt="#"/></a>
+                </p>
+                <!-- 产品标题-->
+                <a href="{$r.url}">
+                <h2>{$r.title}</h2>
+                <!-- 产品描述-->
+                <p class="des">{$r.keywords}</p>
+                </a>
+              </div>
+            </YP:list>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12" style="margin-bottom: 5%;background: #fff;padding: 0">
+          <!-- product datail-->
+          <div class="productDatailTitle">
+            <h4>Inquire Now</h4>
+          </div>
+          <!-- 内容-->
+          <div class="productDatailContact">
+
+
+            <div class="col-xs-12" style="padding-top: 10px">
+              <h1 style="padding-bottom: 20px">Commissioner one-on-one service</h1>
+              <form name="form" method="post" action="index.php?g=Home&a=message" onSubmit="return beforeSubmit2(this);"
+                    id="user_form2">
+                <div class="col-xs-6">
+                  <p>Name:</p>
+                  <input type="text" class="col-sm-12 input-text" name="name"/>
+                  <p>Phone:</p>
+                  <input type="text" class="col-sm-12 input-text" name="phone"/>
+                </div>
+                <div class="col-xs-6">
+                  <p>E-mail:</p>
+                  <input type="text" class="col-sm-12 input-text" name="email"/>
+                  <p>Model:</p>
+                  <input type="text" class="col-sm-12 input-text" name="model"/>
+                </div>
+                <div class="col-xs-12">
+                  <p>Message:</p>
+                  <!--input type="text" class="col-sm-12 input-text" id="contactinput-6" /-->
+                  <textarea class="col-sm-12 input-text input-textarea" name="message"></textarea>
+                </div>
+                <div class="col-md-6 col-md-push-3">
+                  <input id="form_submit" class="btn col-sm-12" type="submit" value="Submit" form="user_form2">
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
 
     new WOW().init();
 
     var galleryTop = new Swiper('.swiper1', {
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        spaceBetween: 10,
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      spaceBetween: 10,
     });
     var galleryThumbs = new Swiper('.swiper2', {
-        spaceBetween: 10,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        touchRatio: 0.2,
-        slideToClickedSlide: true
+      spaceBetween: 10,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      touchRatio: 0.2,
+      slideToClickedSlide: true
     });
     galleryTop.params.control = galleryThumbs;
     galleryThumbs.params.control = galleryTop;
 
 
-</script>
+  </script>

@@ -2,7 +2,7 @@ body{
     margin: 0;
 }
 
-table{table-layout: fixed;}td(word-break: break-all; word-wrap:break-word;)
+table{table-layout: fixed;}td{word-break: break-all; word-wrap:break-word;}
 table { table-layout: fixed;word-wrap:break-word;}div { word-wrap:break-word;}
 
 /* CSS Document */
@@ -114,6 +114,7 @@ input, select {
     overflow: hidden;
     width: 100%;
     height: 21px;
+    color: #0a73af;
 }
 
 .indexProductClick{
@@ -124,7 +125,7 @@ input, select {
 .indexProductClick .swiper-slide{
     text-align: center;
     padding: 3% 0;
-    border: 2px solid #425161;
+    border: 1px solid #425161;
     width: 47% !important;
     z-index: 1;
     box-sizing: border-box;
@@ -142,6 +143,7 @@ input, select {
     overflow: hidden;
     width: 100%;
     height: 14px;
+    color: #333333;
 }
 
 .indexProductClick .swiper-slide a{
@@ -163,7 +165,7 @@ input, select {
 
 .indexProductClick .swiper-button-next img,
 .indexProductClick .swiper-button-prev img{
-    width: 28px;
+    width: 20px;
 }
 
 .indexProductClick .swiper-container {
@@ -194,7 +196,8 @@ input, select {
     display: inline-block;
     width: 200px;
     padding: 13px 35px;
-    border: 1px solid #5dc127;
+    background: #0a73af;
+    font-weight: bold;
 }
 
 .indexViewA a img{
@@ -205,11 +208,12 @@ input, select {
 
 .indexViewA a span{
     float: left;
+  line-height: 22px;
 }
 
 .indexAboutDiv{
     background:  #fff;
-    padding: 30px 22px;
+    padding: 0px 22px;
 }
 
 .indexAboutDiv img{
@@ -221,17 +225,18 @@ input, select {
     line-height: 24px;
     margin: 2% 0;
     font-size: 14px;
+  text-indent: 2em;
 }
 
 .indexAboutDiv a{
     position: relative;
     display: inline-block;
-    color: #000;
     font-size: 16px;
-    padding: 8px 70px 8px 41px;
-    margin: 4% 0;
+    padding: 8px 35px 8px 35px;
+    margin: 4% 33%;
     text-decoration: none;
     box-shadow: 0 0 3px #777;
+  background: #0a73af;
 }
 
 .indexAboutDiv a img{
@@ -327,10 +332,49 @@ input, select {
 .mm-listviewActive{
     background: #329122 !important;
 }
-
-
-
-
+.indexProList{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.indexProList ul{
+  list-style: none;
+}
+.indexProList ul li{
+  border: 1px solid #b2b2b2;
+  margin-bottom: 20px;
+  padding: 3%;
+  height: 70px;
+}
+.indexProList ul li div{
+  width: 60%;
+  display: inline-block;
+}
+.indexProList ul li div h4{
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  height: 25px;
+  line-height: 25px;
+  font-size:  14px;
+  font-weight: bold;
+}
+.indexProList ul li div p{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  height: 40px;
+  line-height: 13px;
+  font-size: 10px;
+  color: #666666;
+}
+.indexProList ul li img{
+  width: 31.5%;
+  padding-left: 5%;
+  max-height: 100%;
+}
 /**************
 **************Product页面
 ***************/
@@ -346,8 +390,9 @@ input, select {
 }
 
 .productTextTopP{
-    width: 150px;
+    width: 100%;
     margin: 0 auto;
+	text-align:center
 }
 
 .productTextTopP p,
@@ -381,7 +426,7 @@ input, select {
         border: 1px solid #224f6d !important;
         display: inline-block !important;
         width: 47% !important;
-        height: 15px !important !important;
+        height: 15px !important;
         overflow: hidden !important;
         /* margin: 0 1%; */
         margin-right: 1% !important;
@@ -465,6 +510,7 @@ input, select {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
+  color: #333333;
 }
 
 .productListDivs img{
@@ -487,6 +533,7 @@ input, select {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
+  color: #666666;
 }
 
 /*分页标签*/
@@ -587,6 +634,16 @@ input, select {
     padding: 5% 0;
 }
 
+.productDetailTextConterOne img{
+  max-width: 100%;
+  height: inherit;
+}
+
+.productDetailTextConterOne p img{
+  max-width: 100%;
+  height: inherit;
+}
+
 .productDetailTextConterTwoLeft,
 .productDetailTextConterTwoRight{
     float: left;
@@ -633,7 +690,7 @@ input, select {
 }
 
 .productDetailMoreProductOne{
-    width: 31%;
+    width: 30.9%;
     float: left;
     margin: 1.2%;
 }
@@ -652,7 +709,7 @@ input, select {
     border: 1px solid #e2e2e2;
     display: inline-block;
     width: 100%;
-    height: 170px;
+    min-height: 100px;
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -820,3 +877,107 @@ input, select {
     box-sizing: border-box;
     padding-left: 4%;
 }
+
+.downloadList h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    width: 100%;
+    height: 35px;
+}
+.downloadList a{
+	text-decoration:none;
+	height:16px;
+}
+.more_btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #fdd14c;
+    color: #3f3f3f;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.sr{
+  padding: 20px 0;
+  width: 96%;
+  margin: 0 auto;
+}
+.sr p{
+}
+.sr a{
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px dashed #999999;
+}
+.sr .title{
+    font-size: 14px;
+  font-weight: bold;
+    color: #333333;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  line-height: 30px;
+}
+.sr .float-r{
+  font-size: 10px;
+  color: #666666;
+}
+.News-content{
+  width: 96%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.News-content .title{
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+}
+.News-content h3{
+  padding-bottom: 10px;
+}
+.News-content h3 p:last-child{
+  font-size: 10px;
+  color: #999999;
+  text-align: center;
+  font-weight: normal;
+}
+.News-content .col-sm-12 p{
+  text-indent: 10px;
+  font-size: 10px;
+  color: #666666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

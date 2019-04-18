@@ -281,22 +281,19 @@ $(function(){
                     alert('Name can not be empty');
                     form.name.focus();
                     return false;
-                }else if(form.phone.value==''){
-                    alert('The phone can not be empty');
-                    form.phone.focus();
-                    return false;
                 }
-                 else if(!(/(?:\(?[0\+]\d{0,9}\)?)[\s-]?(?:(?:\(0{1,3}\))?[0\d]{1,4})[\s-](?:[\d]{7,8}|[\d]{3,4}[\s-][\d]{3,4})/).test(form.phone.value)){
-                    alert('The phone is wrong');
-                    form.phone.focus();
-                    return false;
-                }
-
-                // else if(form.phone.value.length < 6){
+                //  else if(!(/^[0-9-()+(^\s*)|(\s*$)]+$/).test(form.phone.value)){
                 //     alert('The phone is wrong');
                 //     form.phone.focus();
                 //     return false;
                 // }
+
+
+                else if(form.phone.value.length < 6){
+                    alert('The phone is wrong');
+                    form.phone.focus();
+                    return false;
+                }
                 else if(form.email.value==''){
                     alert('Please enter the correct email format');
                     form.email.focus();
@@ -306,6 +303,11 @@ $(function(){
                     form.email.focus();
                     return false;
                 }
+                else if(form.email.value==''){
+                  alert('Please enter the correct email format');
+                  form.email.focus();
+                  return false;
+                }
                 else if(form.message.value==''){
                     alert('Need message');
                     form.message.focus();
@@ -314,7 +316,8 @@ $(function(){
                     alert('Need more information to full in the content!');
                     form.message.focus();
                     return false;
-                }else{
+                }
+                else{
 
                     if (submitcount2 == 0){
                      submitcount2++;
@@ -326,6 +329,6 @@ $(function(){
                     }
                 }
 
-                
+
 
             }

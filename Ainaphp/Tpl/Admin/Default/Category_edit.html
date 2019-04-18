@@ -32,12 +32,12 @@
 
       	<tr>
 		<td>* {:L('catname')}</td>
-		<td><input type="text" name="catname" class="input-text  required"  id="catname" value="{$vo['catname']}"  minlength="1"  maxlength="30"  /></td>
+		<td><input type="text" name="catname" class="input-text  required"  id="catname" value="{$vo['catname']}"  minlength="1"  maxlength="40"  /></td>
 		</tr>
 
 	    <tr>
 		<td>* {:L('catdir')}</td>
-		<td><input type="text" id="catdir" name="catdir" class="input-text  required" value="{$vo['catdir']}" validate="required:true, english:true,minlength:1, maxlength:30"/><span class="catdirBtn" onclick="catdir.value=($('#catname').toPinyin());">{:L('pinyin')}</span></td>
+		<td><input type="text" id="catdir" name="catdir" class="input-text  required" value="{$vo['catdir']}" validate="required:true, english:true,minlength:1, maxlength:40"/><span class="catdirBtn" onclick="catdir.value=($('#catname').toPinyin());">{:L('pinyin')}</span></td>
 		</tr>
 
 

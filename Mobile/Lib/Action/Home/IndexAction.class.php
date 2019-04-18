@@ -30,7 +30,7 @@ class IndexAction extends BaseAction
 		$count =  $model->where('status=1')->count();// 查询满足要求的总记录数
 		$Adp_sql = $model->where('status=1')->getField('title',$count+1);
 		foreach ($Adp_sql as $value) {
-		sendmail($value,"Inquiry Product : ledflashlighting", $body);
+		sendmail($value,"Inquiry Product : YongYingFeng", $body);
 		}
 		
 	}
@@ -44,17 +44,27 @@ class IndexAction extends BaseAction
          $t = array_keys(array_map('trim', $_POST), '');//如果空格算空，就用这条
          if($t) { //有空数据项
           $this->error("Send failed!"); //值就是为空的项提示错误
-         }	
+         }
+		 
+		 $ip = get_client_ip();
+        $ADDRESS=$this->getAddressFromIp($ip);
+		
+		if(stristr($this->_POST('message'), 'www.FyLitCl7Pf7ojQdDUOLQOuaxTXbj5iNG.com')) { 
+          $this->error("Error of inquiry information！"); 
+         }
+		 
+		if($ADDRESS=="俄罗斯") { 
+          $this->error("The area is not in the service area！"); 
+        }	
 		 
 		if(preg_match("/^[0-9-()+(^\s*)|(\s*$)]+$/",$this->_POST('phone'))){
-		 	
-	    $ip = get_client_ip();
-        $ADDRESS=$this->getAddressFromIp($ip);
+		
 		
 	    $body= " IP ADDRESS: ".$ADDRESS."<br>";	
         $body.= " USER: ".$this->_POST('name')."<br>";
         $body.= " EMAIL:".$this->_POST('email')."<br>";
         $body.= " PHONE:".$this->_POST('phone')."<br>";
+		$body.= " MODEL:".$this->_POST('model')."<br>";
         $body.= " CONTENT:".$this->_POST('message');
 
         $nowtime=time();
@@ -76,12 +86,10 @@ class IndexAction extends BaseAction
 			
 			$result = $mod->add();
             if($result) {
-                //$this->success('Sent successfully!');
-				
-			   //sendmail("www.ledflashlighting.com","Inquiry Product :ledflashlighting", $body);
-			   //sendmail("donna.lin@cosmoing.com","Inquiry Product :ledflashlighting", $body);
-			   //sendmail("david.liu@adwordsfs.com","Inquiry Product : ledflashlighting", $body);
-		       //sendmail("jimmy.su@adwordsfs.com","Inquiry Product : ledflashlighting", $body);
+			
+			   $_SESSION['time']=time();
+			
+               
 			    $this->get_mail($body);
 			 
                redirect('thanks.html', 0, 'Message sent successfully!');

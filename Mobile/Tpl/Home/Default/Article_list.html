@@ -1,0 +1,32 @@
+<div class="banner">
+  <img src="__PUBLIC__/wap/image/Aluminum_top.jpg" alt="" class="img-responsive"/>
+
+</div>
+<div class="content"style="min-height: 170px;">
+
+	<div class="section53">
+		<div class="sec53_box">
+			<div class="container sr">
+				    <volist name="list" id="r">
+               		<a href="{$r.url}">
+
+	                        <p class="title">{$r.title}</p>
+	                        <p class="float-r">{$r.createtime|toDate=###,"Y-m-d"}</p>
+
+	                    <!--<p style="color: black;">{$r.keywords}</p>-->
+               		 </a>
+           			</volist>
+				<!-- <div class="row row2">
+				   <volist name="list" id="r" offset="2" length="1">
+				   	<a href="{$r.url}">
+					   	 <div class="col-xs-12">
+							<img src="{$r.thumb}">
+							<p>{$r.title}</p>
+						</div>
+					</a>
+				   </volist>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</div>

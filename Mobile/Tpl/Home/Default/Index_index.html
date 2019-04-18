@@ -15,42 +15,50 @@
 
             </div>
         </div>
+        <!--产品列表-->
+        <div class="indexProList">
+          <ul>
 
-        <!-- 五幅横图-->
-        <div class="indexFImg">
-            <div>
-                <a href="###">
-                    <img src="__PUBLIC__/wap/image/m-indexp_01.jpg" alt=""/>
-                </a>
-            </div>
-            <div>
-                <a href="###">
-                    <img src="__PUBLIC__/wap/image/m-indexp_02.jpg" alt=""/>
-                </a>
-            </div>
-            <div>
-                <a href="###">
-                    <img src="__PUBLIC__/wap/image/m-indexp_03.jpg" alt=""/>
-                </a>
-            </div>
-            <div>
-                <a href="###">
-                    <img src="__PUBLIC__/wap/image/m-indexp_04.jpg" alt=""/>
-                </a>
-            </div>
-            <div>
-                <a href="###">
-                    <img src="__PUBLIC__/wap/image/m-indexp_05.jpg" alt=""/>
-                </a>
-            </div>
+           <YP:list order="id desc" catid="73" limit="4" posid="1">
+              <li>
+                <div>
+                  <h4>{$r.title}</h4>
+                  <p>{$r.description}</p>
+                </div>
+                <a href="{$r.url}"><img src="{$r.thumb}" alt="{$r.title}"></a>
+              </li>
+            </YP:list>
+            <!-- <li>
+              <div>
+                <h4>SH-TT-1609</h4>
+                <p>Mill finish, powder coated, anodized, electrophoresis</p>
+              </div>
+              <img src="__PUBLIC__/wap/image/5.png" alt="">
+            </li>
+            <li>
+              <div>
+                <h4>SH-TT-1609</h4>
+                <p>Mill finish, powder coated, anodized, electrophoresis</p>
+              </div>
+              <img src="__PUBLIC__/wap/image/5.png" alt="">
+            </li>
+            <li>
+              <div>
+                <h4>SH-TT-1609</h4>
+                <p>Mill finish, powder coated, anodized, electrophoresis</p>
+              </div>
+              <img src="__PUBLIC__/wap/image/5.png" alt="">
+            </li> -->
+          </ul>
         </div>
+        <!--产品列表结束-->
 
         <!-- 滑动展示商品专区-->
-        <div class="indexSlideProduct" style="background: url(__PUBLIC__/wap/image/indexBg.jpg)">
+        <div class="indexSlideProduct">
             <!-- png图片-->
-             <div class="indexPng">
+             <!--div class="indexPng">
                  <img src="__PUBLIC__/wap/image/wb02_03.png" alt=""/>
-             </div>
+             </div-->
             <!-- 标题-->
             <div class="indexPag">
                 <h2>HOT PRODUCTS</h2>
@@ -60,17 +68,16 @@
             <div class="indexProductClick">
                 <div class="swiper-container swiper-container-horizontal">
                     <div class="swiper-wrapper">
-                    
-                        <YP:list catid="73" limit="6" field="*" posid="1" key="n">
+
+                        <YP:list order="id desc" catid="73" limit="8" field="*" posid="1" key="n">
                         <div class="swiper-slide">
                             <h2>{$r.title}</h2>
                             <a href="{$r.url}">
                                 <img src="{$r.thumb}" alt="{$r.title}" style="max-width: 100%"/>
                             </a>
+                            <!-- <p>{$r.description}</p> -->
                         </div>
                          </YP:list>
-                        
-
                     </div>
                     <!-- Add Arrows -->
                     <div class="swiper-button-next swiper-button-next2">
@@ -84,8 +91,8 @@
 
             <!-- view按钮-->
             <div class="indexViewA">
-                <a href="product.html" class="clearfix">
-                    <span>VIEW ALL  PRODUCTS</span>
+                <a href="/ProductCategories.html" class="clearfix">
+                    <span>View All Products</span>
                     <img src="__PUBLIC__/wap/image/rightClick.png" alt=""/>
                 </a>
             </div>
@@ -93,17 +100,16 @@
             <!-- about模块-->
             <div class="indexAboutDiv">
                 <!-- about图片-->
-                <img src="__PUBLIC__/wap/image/m-index_20.jpg" alt=""/>
+              <div class="indexPag">
+                <h2>About Us</h2>
+              </div>
 
-                <img src="__PUBLIC__/wap/image/m-index_24.jpg" alt="" style="margin: 3% 0"/>
 
-                <p>Established in Foshan in 1993, one of the most famous industria Cities in China, Wenyang Stationery Manufacturing CO, LTD
-                    Is a Manufacturer and Exporter Specializing in White Boards, Notice Boards, ChalkboardsFlipchart easels, Whiteboard Stands,
-                    Print Racks, Magazine Stands, <br />News-Paper Stands, Our Factory Covers an Area Of 25,000 Square Meters... </p>
+              <img src="__PUBLIC__/wap/image/m-index_24.jpg" alt="" style="margin: 3% 0"/>
+              <p><b>{$name}</b>  <YP:block pos="about" /></p>
 
-                <a href="about.html">
+                <a href="/about.html">
                     MORE
-                    <img src="__PUBLIC__/wap/image/indexRight.jpg" alt="" style="width: 35px"/>
                 </a>
             </div>
 

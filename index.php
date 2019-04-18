@@ -83,6 +83,7 @@ define('APP_PATH', './Mobile/');
    }
 	
 
+
 define('APP_LANG', false);
 //define('APP_DEBUG',false);// 关闭调试模式
 define('APP_DEBUG', true); // 开启调试模式

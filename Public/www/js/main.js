@@ -32,17 +32,10 @@ $(function () {
         $(this).css("background","#43a42d");
     })
 
-//判断页面高度大于多少时返回顶部按钮显示出来
-    $(window).scroll(function() {
-        /* 判断滚动条 距离页面顶部的距离 100可以自定义*/
-        if($(window).scrollTop() > 100) {
-            $(".indexTopCLick").fadeIn();
-        } else {
-            $(".indexTopCLick").fadeOut();
-        }
-    });
+// //点击top回到顶部
+  $('.top').click(function(){
+  	$('body,html').animate({"scrollTop":0},500)
+  })
 
-    $(".indexTopCLick").click(function() {
-        $("html,body").animate({scrollTop:0}, 500);
-    });
 })
+

@@ -14,131 +14,150 @@
     </div>
 </div>
 
-<!--五个图片-->
-<div style="background: #14374b;padding-top: 3%;padding-bottom: 4%">
-    <div class="container ">
-        <div class="row indexFiveImg" data-wow-delay=".3s">
-            <div class="col-xs-4 wow slideInRight" data-wow-delay=".2s">
-                <a href="###">
-                    <img src="__PUBLIC__/www/image/index_05.jpg" alt="" class="img-responsive"/>
-                </a>
-            </div>
-            <div class="col-xs-4  wow slideInRight" data-wow-delay=".4s">
-                <a href="###">
-                    <img src="__PUBLIC__/www/image/index_07.jpg" alt="" class="img-responsive"/>
-                </a>
-            </div>
-            <div class="col-xs-4  wow slideInRight" data-wow-delay=".6s">
-                <a href="###">
-                    <img src="__PUBLIC__/www/image/index_09.jpg" alt="" class="img-responsive"/>
-                </a>
-            </div>
-        </div>
-        
-        <div class="row indexFiveImg" style="margin-top: 2%">
-            <div class="col-xs-7  wow slideInRight" data-wow-delay=".8s">
-                <a href="###">
-                    <img src="__PUBLIC__/www/image/index_14.jpg" alt="" class="img-responsive"/>
-                </a>
-            </div>
-            <div class="col-xs-5  wow slideInRight" data-wow-delay="1s">
-                <a href="###">
-                    <img src="__PUBLIC__/www/image/index_16.jpg" alt="" class="img-responsive"/>
-                </a>
-            </div>
-        </div>
-    </div>
+<!--产品列表-->
+<div class="pro">
+  <div class="pro_left left">
+    <h4>Hot-Sale Product</h4>
+    <ul id="catid_ck">
+      <YP:subcat catid="73" id="r" where="listorder asc" limit="12" key="n" field="*">
+      <if condition="$r.catname neq 'Thanks'">
+        <li class="catid_on" catid-data="{$r.id}" cat-dir="{$r.catdir}"><a id="cat_n">{$r.catname}</a></li>
+      <!-- {if $r[child]==1}
+        <YP:subcat catid="$r[id]" id="rs" limit="10" key="nn">
+            <li><a href="{$rs.url}">{$rs.catname}</a></li>
+        </YP:subcat>
+      {/if} -->
+     </if>
+      </YP:subcat>
+    </ul>
+  </div>
+
+  <div class="pro_right left">
+    <ul id=html_rep>
+      <!-- <YP:list order="listorder asc" catid="107" limit="6"  posid="1"  > -->
+        <li>
+          <a href="{$r.url}">
+            <img src="{$r.thumb}" alt="{$r.title}">
+            <h5>{$r.title}</h5>
+            <p>{$r.description}</p>
+          </a>
+        </li>
+      <!-- </YP:list> -->
+    </ul>
+  </div>
+  <a href="" class="more">More</a>
 </div>
 
 <!--图片楼层切换专区-->
-<div style="background: url(__PUBLIC__/www/image/index_17_bg.jpg)">
-    <div class="container indexcontainer">
-        <!-- 顶部大图片-->
-        <div class="row">
-            <div class="col-xs-12 wow tada">
-                <a href="###">
-                    <img src="__PUBLIC__/www/image/wb02_03.png" alt="" class="img-responsive"/>
-                </a>
-            </div>
-        </div>
-
-        <!--标题和描述文本-->
-        <div class="row" style="margin-top: 2%">
-            <div class="col-xs-12 text-center">
-                <h1 class="wow slideInLeft" style="color: #fff;font-size: 23px">HOT PRODUCTS</h1>
-                <p  class="wow slideInRight" style="color: #fff;font-size: 14px">Face and Back: Double cork sides or double felt sides;   Core: Corrugated cardboard, foam or MDF;   Glue: Environment-friendly</p>
-            </div>
-        </div>
-
-        <!-- 图片滑动切换区域-->
-        <div class="row" style="margin-top: 2%">
-            <div class="col-xs-12 swiperIndex2">
-
-                <div class="swiper-container swiper-container-horizontal swiper-container-free-mode">
-                    <div class="swiper-wrapper">
-                        <!-- 第一张图片-->
-                        <YP:list catid="73" limit="6" field="*" posid="1" key="n">
-                        <div class="swiper-slide text-center wow zoomIn">
-                            <h2>{$r.title}</h2>
-                            <a href="{$r.url}"><img src="{$r.thumb}" alt="{$r.title}"/></a>
-                            <p style="">{$r.description}</p>
-                        </div>
-                        </YP:list>
-
-                    </div>
-
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next swiper-button-next2">
-                        <p>></p>
-                    </div>
-                    <div class="swiper-button-prev swiper-button-prev2">
-                        <p><</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- 图片滑动切换下面的按钮-->
-        <div class="row wow shake" data-wow-duration="2s" style="margin: 3% 0 4% 0;">
-            <div class="col-xs-12 text-center">
-                <div class="indexSlide2BottomClick">
-                    <a href="###">
-                        <span style="color: #fff">VIEW ALL  PRODUCTS</span>
-                        <span>
-                            <img src="__PUBLIC__/www/image/rightClick.png" alt=""/>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
+<div>
+  <div class="container indexcontainer">
+    <!-- 顶部大图片-->
+    <div class="row">
+      <div class="wow tada">
+        <h1 class="wow slideInLeft biaoti"></h1>
+        <img src="__PUBLIC__/www/image/index_30.jpg" alt="" class="img-responsive"/>
+      </div>
     </div>
+  </div>
 </div>
 
 <!--about模块-->
 <div class="container" style="padding: 4% 0 5% 0">
-    <div class="row">
-        <div class="col-xs-5 indexAboutImg wow fadeInLeft" data-wow-duration="1s">
-            <a href="###">
-                <img src="__PUBLIC__/www/image/index_19.jpg" alt="" class="img-responsive"/>
-            </a>
+  <div class="row">
+    <h4 class="wow slideInLeft biaoti" style="color: #fff">About Us</h4>
+    <div class="col-xs-5 indexAboutImg wow fadeInLeft" data-wow-duration="1s">
+      <a href="CompanyProfile.html">
+        <div class="img_kuang">
+          <img src="__PUBLIC__/www/image/about.jpg" alt="" class="img-responsive"/>
         </div>
-        
-        <div class="col-xs-7">
-            <img src="__PUBLIC__/www/image/index_21.jpg" alt="" class="img-responsive wow bounceInRight" data-wow-delay=".2s"/>
-
-            <p class="indexAboutText wow bounceInRight" data-wow-delay=".5s">Established in Foshan in 1993, one of the most famous industria Cities in China, Wenyang Stationery Manufacturing CO, LTD </p>
-
-            <p  class="indexAboutText2 wow bounceInRight" data-wow-delay=".7s">
-                Is a Manufacturer and Exporter Specializing in White Boards, Notice Boards, ChalkboardsFlipchart easels,
-                Whiteboard Stands, Print Racks, Magazine Stands, News-Paper Stands, Our Factory Covers an Area Of 25,000 Square Meters...
-            </p>
-
-
-            <a href="about.html" class="indexRightClick wow bounceInRight" data-wow-delay="1s">
-                MORE
-                <img src="__PUBLIC__/www/image/indexRight.jpg" alt=""/>
-            </a>
-        </div>
+      </a>
     </div>
+
+    <div class="col-xs-7">
+
+      <p class="indexAboutText wow bounceInRight" data-wow-delay=".5s">
+        <b>{$name}</b> <YP:block pos="about" />
+      </p>
+   <!--    <p class="indexAboutText wow bounceInRight" data-wow-delay=".6s">
+      </p>
+      <p class="indexAboutText wow bounceInRight" data-wow-delay=".7s">
+      </p> -->
+      <a href="about.html" class="more2 wow bounceInRight"data-wow-delay="1s">More</a>
+
+    </div>
+  </div>
 </div>
+<style>
+  body{
+    background: #14374b;
+  }
+</style>
+<script type="text/javascript">
+
+
+
+
+    window.onload = function(){
+      //默认加载第一个分类
+      getData(107);
+
+      var obj_lis = document.getElementById("catid_ck").getElementsByTagName("li");
+      $("#catid_ck li:first").addClass("active");
+      var first_cat_n=   $("#catid_ck li:first").attr('cat-dir');
+      if(first_cat_n){
+          first_cat_n = first_cat_n.replace(/\//g,'');
+          first_cat_name = first_cat_n.replace(/\s/g,'');
+          $(".more").attr("href",first_cat_name+'.html');
+      }
+
+      // for(i=0;i<obj_lis.length;i++){
+         $(".catid_on").on("mouseenter",function(){
+
+            var catid = $(this).attr("catid-data");
+            var cat_name = $(this).attr('cat-dir');
+            cat_name = cat_name.replace(/\//g,'');
+            cat_name = cat_name.replace(/\s/g,'');
+            $(".more").attr("href",cat_name+'.html');
+            getData(catid);
+
+          });
+
+
+          function getData(catid){
+            // console.log(catid);
+
+            $(".catid_on").removeClass("active");
+            $(this).addClass("active");
+
+
+
+            $.ajax({
+              url: "{:U('/Index/index.php?g=Home&a=getProduct')}",
+              type: 'POST',
+              dataType: 'json',
+              data: {catid:catid},
+              success:function(msg){
+                // console.log(msg);
+                var htmlSpan="";
+                if(msg.data){
+                  var len = msg.data.length;
+
+                  // console.log(len);
+                  for(var i = 0; i<len; i++) {
+                    var id = i ;
+                    htmlSpan += '<li>';
+                    htmlSpan += '<a href=' + msg.data[id].url +'>';
+                    htmlSpan += '<img src=' + msg.data[id].thumb  + ' alt=' + msg.data[id].title + '>';
+                    htmlSpan += '<h5>' + msg.data[id].title + ' </h5>';
+                    htmlSpan += '<p>' + msg.data[id].description + '</p>';
+                    htmlSpan += '</a></li>';
+                  }
+                }
+                //No matching results
+                $('#html_rep').html(htmlSpan);
+              }
+            })
+          }
+    }
+
+</script>

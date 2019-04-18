@@ -159,6 +159,30 @@ class BaseAction extends Action
 			$modle=M('Page');
 			$data = $modle->find($catid);
 			unset($data['id']);
+			
+			//单页面添加多图片
+			$fields = F($this->mod[$module].'_Field');
+		    foreach($data as $key=>$c_d){
+			$setup='';
+			$fields[$key]['setup'] =$setup=string2array($fields[$key]['setup']);
+			if($setup['fieldtype']=='varchar' && $fields[$key]['type']!='text'){
+				$data[$key.'_old_val'] =$data[$key];
+				$data[$key]=fieldoption($fields[$key],$data[$key]);
+			}elseif($fields[$key]['type']=='images' || $fields[$key]['type']=='files'){
+				if(!empty($data[$key])){
+					$p_data=explode(':::',$data[$key]);
+					$data[$key]=array();
+					foreach($p_data as $k=>$res){
+						$p_data_arr=explode('|',$res);
+						$data[$key][$k]['filepath'] = $p_data_arr[0];
+						$data[$key][$k]['filename'] = $p_data_arr[1];
+					}
+					unset($p_data);
+					unset($p_data_arr);
+				}
+			}
+			unset($setup);
+		   }
 
 			//分页
 			$CONTENT_POS = strpos($data['content'], '[page]');

@@ -1,7 +1,7 @@
 
     <!-- 底部的批注-->
-    <div class="indexFooterText" style="background: url(__PUBLIC__/wap/image/m-index_footer.jpg)">
-        <p> {$cop}</p>
+    <div class="indexFooterText" style="background: #c1c1c1">
+        <p>{$cop}</p>
     </div>
 
     <!-- 底部的固定导航-->
@@ -13,22 +13,22 @@
                 <li class="indexFooterFixedText">HOME</li>
             </ul>
         </a>
-        <a href="product.html" {if $catid==73||$catid==94||$catid==95||$catid==96||$catid==102||$catid==104}class="indexFooterFixedAction"{/if}>
+        <a href="/ProductCategories.html" {if $catid==73||$catid==94||$catid==95||$catid==96||$catid==102||$catid==104||$catid==105||$catid==106||$catid==107||$catid==108||$catid==109||$catid==110||$catid==111||$catid==112||$catid==113||$catid==118}class="indexFooterFixedAction"{/if}>
             <ul>
                 <li><img src="__PUBLIC__/wap/image/footer2.png" alt=""/></li>
                 <li class="indexFooterFixedText">PRODUCTS</li>
             </ul>
         </a>
-        <a href="about.html" {if $catid==74}class="indexFooterFixedAction"{/if}>
+        <a href="/about.html" {if $catid==74||$catid==114||$catid==115||$catid==116}class="indexFooterFixedAction"{/if}>
             <ul>
                 <li><img src="__PUBLIC__/wap/image/footer3.png" alt=""/></li>
                 <li class="indexFooterFixedText">ABOUT US</li>
             </ul>
         </a>
-        <a href="contact.html" {if $catid==78}class="indexFooterFixedAction"{/if}>
+        <a href="/contact.html" {if $catid==78}class="indexFooterFixedAction"{/if}>
             <ul>
                 <li><img src="__PUBLIC__/wap/image/footer4.png" alt=""/></li>
-                <li class="indexFooterFixedText">CONTACT US</li>
+                <li class="indexFooterFixedText">CONTACT</li>
             </ul>
         </a>
     </div>
@@ -56,27 +56,27 @@
                 <!-- 侧边栏列表         侧边栏当前栏目页面的背景色由添加mm-listviewActive的class显示             -->
                 <ul class="mm-listview">
                     <li>
-                        <a href="index.php" class="mm-bottom mm-listviewActive">Home</a>
+                        <a href="index.php" class="mm-bottom mm-listviewActive">HOME</a>
                     </li>
 
                     <!-- 这个li是有二级分类的-->
-                    <YP:subcat catid="0" id="r" where="listorder asc" limit="5" key="n">
+                    <YP:subcat catid="0" id="r" where="listorder asc" limit="6" key="n">
                     <if condition="$r.catname neq 'Thanks'">
                     <li class="mm-vertical">
                          <a href="{$r.url}" class="">{$r.catname}</a>
                           {if $r[child]==1}
-                         <a class="mm-next" href="#mm-6" aria-owns="mm-6" aria-haspopup="true"></a>
+                         <a class="mm-next" href="#mm-{$n}" aria-owns="mm-{$n}" aria-haspopup="true"></a>
 
                         <!-- 二级分类列表-->
-                        <div class="mm-panel mm-hidden mm-vertical" id="mm-6" aria-hidden="true">
+                        <div class="mm-panel mm-hidden mm-vertical" id="mm-{$n}" aria-hidden="true">
                             <ul class="dl-submenu mm-listview">
-                         
-                             <YP:subcat catid="$r[id]" id="rs" limit="4" key="nn">
+
+                             <YP:subcat catid="$r[id]" id="rs" limit="8" key="nn">
 							    <li class="dl-submenu-a">
                                 <a href="{$rs.url}">{$rs.catname}</a>
 							   </li>
                              </YP:subcat>
-                                
+
                             </ul>
                         </div>
                          {/if}
@@ -109,7 +109,7 @@
     var swiper = new Swiper('.indexProductClick>.swiper-container', {
         slidesPerView: 2,
         paginationClickable: true,
-        spaceBetween: 13,
+        spaceBetween: 16,
         keyboardControl: true,
         nextButton: '.indexProductClick .swiper-button-next',
         prevButton: '.indexProductClick .swiper-button-prev',

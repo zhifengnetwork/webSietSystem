@@ -1,94 +1,108 @@
 
 <!--底部的三个导航-->
+<!--底部的三个导航-->
 <div style="background: #14374b">
-    <div class="container-fluid">
-        <div class="row IndexFooterThree">
-            <div style="margin: 0 auto;width: 1200px;height: 90px;">
-                <ul class="list-inline wow fadeInUp">
-                    <li><img src="__PUBLIC__/www/image/footer_01.png" alt=""/></li>
-                    <li>
-                        <span>
-                            Domestic market：{$domestic_market}
-                            <br />
-                            Domestic Fax：{$domestic_fax}
-                        </span>
-                    </li>
-                </ul>
-
-                <ul class="list-inline wow fadeInUp" data-wow-delay=".3s">
-                    <li><img src="__PUBLIC__/www/image/footer_02.png" alt=""/></li>
-                    <li>
-                        <span>
-                            International Market：{$international_market}
-                            <br />
-                            International Fax：{$international_fax}
-                        </span>
-                    </li>
-                </ul>
-
-                <ul class="list-inline wow fadeInUp" data-wow-delay=".6s">
-                    <li><img src="__PUBLIC__/www/image/footer_03.png" alt=""/></li>
-                    <li>
-                        <span>
-                            E-mail：{$email}
-                        </span>
-                            <br />
-                        <span>
-                            Address：<span>{$address}</span>
-                        </span>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-
-        <!-- 底部批注-->
-        <div style="background: url(__PUBLIC__/www/image/footerBg.jpg)" class="row">
-            <div class="col-xs-12 text-center" style="font-size: 14px;color: #fff;padding: 18px 0">
-               {$cop}
-            </div>
-        </div>
+    <div class="row IndexFooterThree">
+        <ul class="list-inline wow fadeInUp">
+        <li>
+            <img src="__PUBLIC__/www/image/book.png" alt=""/>
+            <span>
+                Contact：{$contact_skype}<br/>
+                position： {$position}
+            </span>
+        </li>
+        <li>
+            <img src="__PUBLIC__/www/image/phone.png" alt="">
+            <span>
+              Phone：{$phone}<br/>
+              E-mail：{$email}
+            </span>
+        </li>
+        <li>
+            <img src="__PUBLIC__/www/image/address.png" alt=""/>
+            <span>
+              Address：{$address}
+            </span>
+        </li>
+    </ul>
     </div>
+    <div style="background: #c1c1c1; height: 30px;line-height: 30px">
+    <div class="text-center" style="font-size: 14px;color: #fff;">
+     {$copy}
+    </div>
+  </div>
 </div>
-
+<div class="top">
+    TOP
+</div>
 <!--悬浮表单-->
-<div class="float-form wow bounceInRight">
-    <div class="show-btn" style="display: block;">
-        <img alt="" src="__PUBLIC__/www/image/ms.png">
-        Inquire Now
-    </div>
-    <div class="show-form" style="display: none; opacity: 0;">
-        <span class="X">X</span>
-        <h2>Inquire Now</h2>
-        <p>Commissioner one-on-one service</p>
-        <form name="form" method="post" action="index.php?g=Home&a=message" onSubmit="return beforeSubmit2(this);" id="user_form2">
-            <div class="showFormBacColor">
-                <div class="form-line01">
-                    <input type="text" name="name" placeholder="NAME">
-                </div>
-                <div class="form-line01">
-                    <input type="text" name="phone" placeholder="PHONE">
+<div class="float-form">
+  <div class="show-btn" style="display: block;">
+    <img alt="" src="__PUBLIC__/www/image/ms.png">
+    Inquire Now
+  </div>
+  <div class="show-form" style="display: none; opacity: 0;">
+    <span class="X">X</span>
+    <h2>Inquire Now</h2>
+    <p>Commissioner one-on-one service</p>
+    <form name="form" method="post" action="index.php?g=Home&a=message" onSubmit="return beforeSubmit2(this);" id="user_form2">
+      <div class="showFormBacColor">
+        <div class="form-line01">
+          <input type="text" name="name" placeholder="NAME">
+        </div>
+        <div class="form-line01">
+          <input type="text" name="phone" placeholder="PHONE">
 
-                </div>
-                <div class="form-line01">
-                    <input type="text" name="email" placeholder="EMAIL">
-                </div>
-                <div class="form-line01">
-                    <textarea name="message" placeholder="MESSAGE"></textarea>
-                </div>
-            </div>
-            <div class="form-line01">
+        </div>
+        <div class="form-line01">
+          <input type="text" name="email" placeholder="EMAIL">
+        </div>
+        <div class="form-line01">
+          <textarea name="message" placeholder="MESSAGE"></textarea>
+        </div>
+      </div>
+      <div class="form-line01">
 
-                <input id="form_submit" type="submit" value="Submit" form="user_form2">
-            </div>
-        </form>
-    </div>
+        <input id="form_submit" type="submit" value="Submit" form="user_form2">
+      </div>
+    </form>
+  </div>
 </div>
 <!--返回顶部按钮-->
-<div class="indexTopCLick" style="position: fixed;bottom: 3rem;right: 0;display: none">
-    <img src="__PUBLIC__/www/image/top-1.png" alt=""/>
-</div>
 
+<!--右边联系方式-->
+<!--<div class="lxwm">-->
+  <!--<h4>Online Consulting</h4>-->
+  <!--<ul>-->
+    <!--<li>-->
+      <!--<a href="/contact.html">-->
+        <!--<img src="__PUBLIC__/www/image/wenti.png" alt="">-->
+        <!--<p>Contact us</p>-->
+      <!--</a>-->
+    <!--</li>-->
+    <!--<li>-->
+      <!--<a href="skype:live:koci_4?chat" onclick="return skypeCheck()">-->
+
+        <!--<img src="__PUBLIC__/www/image/skype.png" alt="">-->
+        <!--<p>Skype</p>-->
+      <!--</a>-->
+    <!--</li>-->
+    <!--<li class="tanchu">-->
+      <!--<a href="">-->
+        <!--<img src="__PUBLIC__/www/image/wechat.png" alt="">-->
+        <!--<p>Wechat</p>-->
+        <!--<img class="tc_img" src="__PUBLIC__/www/image/erweima.jpg" alt="">-->
+      <!--</a>-->
+    <!--</li>-->
+    <!--<li class="tanchu">-->
+      <!--<a href="whatsapp://send?phone=8613928645638"target="_blank">-->
+        <!--<img src="__PUBLIC__/www/image/WhatsApp.png" alt="">-->
+        <!--<p>Whatsapp</p>-->
+      <!--</a>-->
+    <!--</li>-->
+  <!--</ul>-->
+  <!--<h4 class="indexTopCLick">top</h4>-->
+<!--</div>-->
 
 <script>
     new WOW().init();
@@ -117,7 +131,6 @@
         slidesPerView: 4,
         spaceBetween: 30
     });
-
 </script>
 </body>
 </html>
