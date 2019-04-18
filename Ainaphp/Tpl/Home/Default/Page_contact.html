@@ -1,0 +1,132 @@
+
+<!--顶部图片-->
+<div class="container-fluid" style="padding: 0">
+    <div class="row" style="margin: 0;">
+        <div class="col-xs-12" style="padding: 0;">
+             {if $Categorys[$bcid][image]}<img src="{$Categorys[$bcid][image]}" alt="banner">{else}<img src="__PUBLIC__/www/image/productTopBg.jpg" alt="" class="img-responsive"/>{/if}
+        </div>
+    </div>
+</div>
+
+<div style="background: #efefef">
+
+    <div class="container">
+        <!--标题-->
+        <div class="row" style="margin: 3% 0">
+            <!-- 标题-->
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-4" style="padding: 0">
+                        <span><img src="__PUBLIC__/www/image/productH.png" alt=""/></span>
+                        <span style="font-size: 23px;color: #000;position: relative;top: 5px;font-family: Bold;">CONTACT US</span>
+                    </div>
+                    <!--面包屑-->
+                    <div class="col-xs-8 text-right" style="padding-top: 10px">
+                        <span style="padding-right: 5px"><img src="__PUBLIC__/www/image/productM.png" alt=""/></span>
+                        <span style="color: #666;font-size: 14px">You Location：
+                            <a href="index.html">Home</a> -<YP:catpos catid="catid" space=" - "/>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--表单-->
+        <div class="row contactUsBac">
+            <div class="col-xs-5 contactUsBacLeft">
+                <h4>{$name}</h4>
+
+                <p>Address：{$address}</p>
+
+                <p>Domestic market：{$domestic_market}</p>
+
+                <p class="contactUsBorderB">Contact QQ：{$contact_qq}</p>
+
+                <p>International Market：{$international_market}</p>
+
+                <p>Contact Skype：{$contact_skype}</p>
+
+                <p  class="contactUsBorderB"> Domestic Fax：{$domestic_fax}</p>
+
+                <p>International Fax：{$international_fax}</p>
+
+                <p>E-mail：{$email}</p>
+
+            </div>
+
+
+            <div class="col-xs-6 col-xs-offset-1" style="padding-top: 10px">
+                <form name="form" id="user_form1" method="post" onsubmit="return beforeSubmit2(this);" action="index.php?g=Home&a=message">
+                    <p>Name:</p>
+                    <input type="text" class="col-sm-12 input-text" name="name">
+                    <p>Phone:</p>
+                    <input type="text" class="col-sm-12 input-text" name="phone">
+                    <p>E-mail:</p>
+                    <input type="text" class="col-sm-12 input-text" name="email">
+                    <!--p>Address:</p>
+                    <input type="text"  class="col-sm-12 input-text" id="contactinput-5"/-->
+                    <p>Message:</p>
+                    <!--input type="text" class="col-sm-12 input-text" id="contactinput-6" /-->
+                    <textarea class="col-sm-12 input-text input-textarea" name="message"></textarea>
+                    <input type="submit" class="btn col-sm-12" value="SEND MESSAGE" for="user_form1">
+                </form>
+            </div>
+
+            <!-- 地图-->
+                <div class="col-xs-12" style="margin: 5% 0 2% 0">
+                    <img src="__PUBLIC__/www/image/contact-us_03.jpg" alt="" class="img-responsive" style="width: 100%"/>
+                </div>
+        </div>
+
+<!--表单的验证-->
+        <script>
+            function beforeSubmit2(form){
+
+                if(form.name.value==''){
+                    alert('Name can not be empty');
+                    form.name.focus();
+                    return false;
+                }else if(form.phone.value==''){
+                    alert('The phone can not be empty');
+                    form.phone.focus();
+                    return false;
+                }else if(form.phone.value.length < 6){
+                    alert('The phone is wrong');
+                    form.phone.focus();
+                    return false;
+                }else if(form.email.value==''){
+                    alert('Please enter the correct email format');
+                    form.email.focus();
+                    return false;
+                }else if(form.email.value.indexOf('@')<0){
+                    alert('The email is wrong');
+                    form.email.focus();
+                    return false;
+                }else if(form.message.value==''){
+                    alert('Need message');
+                    form.message.focus();
+                    return false;
+                }else if(form.message.value.length<32){
+                    alert('Need more information to full in the content!');
+                    form.message.focus();
+                    return false;
+                }else{
+
+                    if (submitcount2 == 0){
+                        submitcount2++;
+                        return true;
+                    } else{
+                        alert("Message is being sent, please wait!");
+                        return false;
+
+                    }
+                }
+
+            }
+        </script>
+    </div>
+</div>
+
+
+

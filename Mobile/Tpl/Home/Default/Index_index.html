@@ -1,0 +1,114 @@
+
+    <!-- 内容 -->
+    <div class="content">
+
+        <!-- 轮播图-->
+        <div class="indexBannerSlide">
+            <div class="swiper-container swiper-container-horizontal">
+                <div class="swiper-wrapper">
+                     <YP:flash flashid="2" />
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 五幅横图-->
+        <div class="indexFImg">
+            <div>
+                <a href="###">
+                    <img src="__PUBLIC__/wap/image/m-indexp_01.jpg" alt=""/>
+                </a>
+            </div>
+            <div>
+                <a href="###">
+                    <img src="__PUBLIC__/wap/image/m-indexp_02.jpg" alt=""/>
+                </a>
+            </div>
+            <div>
+                <a href="###">
+                    <img src="__PUBLIC__/wap/image/m-indexp_03.jpg" alt=""/>
+                </a>
+            </div>
+            <div>
+                <a href="###">
+                    <img src="__PUBLIC__/wap/image/m-indexp_04.jpg" alt=""/>
+                </a>
+            </div>
+            <div>
+                <a href="###">
+                    <img src="__PUBLIC__/wap/image/m-indexp_05.jpg" alt=""/>
+                </a>
+            </div>
+        </div>
+
+        <!-- 滑动展示商品专区-->
+        <div class="indexSlideProduct" style="background: url(__PUBLIC__/wap/image/indexBg.jpg)">
+            <!-- png图片-->
+             <div class="indexPng">
+                 <img src="__PUBLIC__/wap/image/wb02_03.png" alt=""/>
+             </div>
+            <!-- 标题-->
+            <div class="indexPag">
+                <h2>HOT PRODUCTS</h2>
+            </div>
+
+            <!-- 商品展示区域-->
+            <div class="indexProductClick">
+                <div class="swiper-container swiper-container-horizontal">
+                    <div class="swiper-wrapper">
+                    
+                        <YP:list catid="73" limit="6" field="*" posid="1" key="n">
+                        <div class="swiper-slide">
+                            <h2>{$r.title}</h2>
+                            <a href="{$r.url}">
+                                <img src="{$r.thumb}" alt="{$r.title}" style="max-width: 100%"/>
+                            </a>
+                        </div>
+                         </YP:list>
+                        
+
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-next2">
+                        <p><img src="__PUBLIC__/wap/image/index_right.png" alt=""/></p>
+                    </div>
+                    <div class="swiper-button-prev swiper-button-prev2">
+                        <p><img src="__PUBLIC__/wap/image/index_left.png" alt=""/></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- view按钮-->
+            <div class="indexViewA">
+                <a href="product.html" class="clearfix">
+                    <span>VIEW ALL  PRODUCTS</span>
+                    <img src="__PUBLIC__/wap/image/rightClick.png" alt=""/>
+                </a>
+            </div>
+
+            <!-- about模块-->
+            <div class="indexAboutDiv">
+                <!-- about图片-->
+                <img src="__PUBLIC__/wap/image/m-index_20.jpg" alt=""/>
+
+                <img src="__PUBLIC__/wap/image/m-index_24.jpg" alt="" style="margin: 3% 0"/>
+
+                <p>Established in Foshan in 1993, one of the most famous industria Cities in China, Wenyang Stationery Manufacturing CO, LTD
+                    Is a Manufacturer and Exporter Specializing in White Boards, Notice Boards, ChalkboardsFlipchart easels, Whiteboard Stands,
+                    Print Racks, Magazine Stands, <br />News-Paper Stands, Our Factory Covers an Area Of 25,000 Square Meters... </p>
+
+                <a href="about.html">
+                    MORE
+                    <img src="__PUBLIC__/wap/image/indexRight.jpg" alt="" style="width: 35px"/>
+                </a>
+            </div>
+
+
+
+        </div>
+
+    </div>

@@ -1,0 +1,97 @@
+ <!-- 内容 -->
+    <div class="content">
+        <!-- 顶部图片-->
+        <div class="productTopImg">
+            {if $Categorys[$bcid][image]}<img src="{$Categorys[$bcid][image]}" alt="banner">{else} <img src="__PUBLIC__/wap/image/topBg.jpg" alt=""/>{/if}
+        </div>
+
+        <!-- 页面标题-->
+        <div class="productTextTop clearfix">
+            <div class="productTextTopP clearfix" style="width: 200px">
+                <p>
+                    <img src="__PUBLIC__/wap/image/productH.png" alt=""/>
+                </p>
+                <h2>PRODUCTS DETAIL</h2>
+            </div>
+        </div>
+
+        <!-- 轮播图-->
+        <div class="productDetailBanner">
+            <div class="swiper-container swiper-container-horizontal">
+                <div class="swiper-wrapper">
+                    
+                   <volist name="pic" id="r" offset="0" length='5' >
+                      <div class="swiper-slide">
+                        <img src="{$r.filepath}" alt="{$title}"/>
+                      </div>
+                   </volist>
+                </div>
+
+                <div class="swiper-button-next">
+                    <img src="__PUBLIC__/wap/image/right.png" alt=""/>
+                </div>
+                <div class="swiper-button-prev">
+                    <img src="__PUBLIC__/wap/image/left.png" alt=""/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 产品描述信息-->
+        <div class="productDetailTextConter">
+
+            <!-- 第一个描述盒子-->
+            <div class="productDetailTextConterOne">
+                <h2>{$title}</h2>
+
+                <h4>{$model}</h4>
+
+                 <p>{$content}</p>
+            </div>
+
+            <!-- 第二个描述盒子-->
+            <div class="productDetailTextConterTwo clearfix">
+               {$available_one}
+            </div>
+
+            <!-- 商品图片-->
+            <div class="productDetailTextConterImg">
+                {$available_two}
+            </div>
+
+
+        </div>
+
+        <!-- 更多商品-->
+        <div class="productDetailMoreP">
+            <!-- 标题-->
+            <div class="productDetailMorePH2">
+                <h2>Hot Products</h2>
+            </div>
+        </div>
+        <!-- 商品-->
+        <div class="productDetailMoreProduct clearfix">
+        
+            <YP:list catid="catid" limit="12" field="*">
+            <div class="productDetailMoreProductOne">
+                <a href="{$r.url}">
+                    <img src="{$r.thumb}" alt="{$r.title}"/>
+                </a>
+                <p>{$r.title}</p>
+            </div>
+          </YP:list>
+
+        </div>
+
+    </div>
+
+<!--这些js只有产品详情页才有-->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 0,
+        loop: true
+    });
+</script>

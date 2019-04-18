@@ -1,0 +1,18 @@
+<!--  sidebar -->
+ <div class="sidebar">
+    <div class="sidebarList ">
+        {if $module_name == 'Search'}
+            <li class="current"><a class="sidebarLink" href="javascript:void(0);" title=""><i></i>Search center</a></li>
+        {elseif $Categorys[$bcid][child]==0}
+            <li class="current"><a class="sidebarLink" href="{$Categorys[$catid][url]}" title=""><i></i>{$Categorys[$catid][catname]}</a></li>
+        {else}
+            <h3 class="title">{$catname}</h3>
+            <ul>
+                <YP:subcat catid="$bcid">
+                    <li class="content-1-list-w {if $catid==$r[id]}active{/if}"><a href="{$r.url}">{$r.catname}</a></li>
+                </YP:subcat>
+            </ul>
+        {/if}
+    </div>
+</div>
+<!--  sidebar -->

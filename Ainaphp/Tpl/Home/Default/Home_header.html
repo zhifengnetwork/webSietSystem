@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     
+    <meta name="keywords" content="{$seo_keywords}"/>
+    <meta name="description" content="{$seo_description}"/>
+    <title>{if MODULE_NAME != 'Index'}{$seo_title}{else}{$site_name}{/if}</title>
+    
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+     <meta name="renderer" content="webkit">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!-- css-->
+    <link rel="stylesheet" href="__PUBLIC__/www/css/animate.min.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/www/css/main.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/www/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/www/css/swiper-3.3.1.min.css"/>
+
+    <!-- script -->
+    <script src="__PUBLIC__/www/js/jquery-2.2.0.min.js"></script>
+    <script src="__PUBLIC__/www/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/www/js/swiper-3.3.1.min.js"></script>
+    <script src="__PUBLIC__/www/js/wow.min.js"></script>
+    <script src="__PUBLIC__/www/js/main.js"></script>
+    <script src="__PUBLIC__/www/js/layout.js"></script>
+   
+     <style>
+        .gallery-thumbs .swiper-slide {
+            width: 18%;
+            height: 100%;
+            opacity: 0.4;
+        }
+
+        .gallery-thumbs .swiper-slide-active {
+            opacity: 1;
+        }
+
+        .gallery-thumbs {
+            height: 20%;
+            box-sizing: border-box;
+            padding: 15px 0;
+        }
+        .gallery-thumbs .swiper-wrapper {
+            transform: translate3d(0, 0px, 0px) !important;
+            transition-duration: 0ms !important;
+        }
+    </style>
+</head>
+<body>
+
+<!--头部-->
+<div class="container-fluid">
+    <div class="row" style="background: #14374b; height: 90px;">
+        <!-- logo-->
+        <div class="col-xs-3 text-center wow slideInLeft">
+            <img src="__PUBLIC__/www/image/logo.png" alt="" style="margin: 0 auto"/>
+        </div>
+        <div class="col-xs-9">
+            <ul class="list-inline text-right indexListUlA" >
+                <!-- i标签用来展示文本上面的绿色横线-->
+                <li>
+                    <i {if MODULE_NAME=='Index'}class="indexListUlATopColor"{/if}></i>
+                    <a href="index.php">HOME</a>
+                </li>
+                
+                <YP:subcat catid="0" id="r" where="listorder asc" limit="6" key="n">
+                <if condition="$r.catname neq 'Thanks'">
+                <li class="{if $r[child]==1}indexProductHover{/if}">
+                    <i {if $bcid==$r[id]}class="indexListUlATopColor"{/if}></i>
+                    <a href="{$r.url}">{$r.catname}</a>
+                    {if $r[child]==1}
+                    <!-- 向上的小箭头-->
+                    <span class="listTopClick"></span>
+                    <!-- 二级栏目-->
+                    <ul class="indexListUlATwoList">
+                     <YP:subcat catid="$r[id]" id="rs" limit="6" key="nn">
+                        <li><a href="{$rs.url}">{$rs.catname}</a></li>
+                     </YP:subcat>
+                    </ul>
+                    {/if}
+
+                </li>
+                </if>
+               </YP:subcat>
+ 
+            </ul>
+        </div>
+    </div>
+</div>

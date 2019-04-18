@@ -1,0 +1,822 @@
+body{
+    margin: 0;
+}
+
+table{table-layout: fixed;}td(word-break: break-all; word-wrap:break-word;)
+table { table-layout: fixed;word-wrap:break-word;}div { word-wrap:break-word;}
+
+/* CSS Document */
+html, body, div, span, object, iframe,h1, h2,
+h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn,
+em, img, ins,kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd,
+ol, ul, li,fieldset, form, label, legend,table, caption, tbody,
+tfoot,thead,tr, th, td,article, aside, canvas, details, figcaption,
+figure, footer, header, menu, nav, section, summary,time, mark,
+audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    outline-style:none;/*FF*/
+}
+
+body {
+    line-height:1;
+}
+
+a{
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    color: #fff;
+}
+
+.indexListUlA>li>a:hover{
+    color: #43a42d !important;
+}
+
+a:hover,a:focus{
+    text-decoration:none !important;
+    bblr:expression(this.onFocus=this.blur());/*IE*/
+    outline-style:none;/*FF*/
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*css为clearfix，清除浮动*/
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix:after{clear:both;}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
+
+
+/*index页面*/
+.indexSlideProduct{
+    padding-top: 10px;
+}
+
+.indexFImg{
+    padding: 20px 15px;
+    background: #14374b;
+    margin-top: -2px;
+}
+
+.indexFImg img{
+    max-width: 100% !important;
+}
+
+
+
+.indexFImg>div{
+    margin-bottom: 3%;
+}
+
+.indexPng{
+    padding: 0 15px;
+}
+
+.indexPng img{
+    max-width: 100%;
+}
+
+.indexPag{
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    margin: 5% 0;
+}
+
+.indexPag h2{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 21px;
+}
+
+.indexProductClick{
+    padding: 0 10px 0 10px;
+    color: #fff;
+}
+
+.indexProductClick .swiper-slide{
+    text-align: center;
+    padding: 3% 0;
+    border: 2px solid #425161;
+    width: 47% !important;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.indexProductClick .swiper-slide:last-child{
+    margin-right: 0 !important;
+}
+
+.indexProductClick .swiper-slide h2{
+    font-size: 13px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 14px;
+}
+
+.indexProductClick .swiper-slide a{
+    display: inline-block;
+    height: 195px;
+    width: 100%;
+    margin-top: 8%;
+}
+
+.indexProductClick .swiper-slide img{
+    max-width: 100% !important;
+}
+
+
+.indexProductClick .swiper-button-next,
+.indexProductClick .swiper-button-prev{
+    background-image: none;
+}
+
+.indexProductClick .swiper-button-next img,
+.indexProductClick .swiper-button-prev img{
+    width: 28px;
+}
+
+.indexProductClick .swiper-container {
+    padding-bottom: 80px;
+}
+
+.indexProductClick .swiper-container .swiper-button-next2{
+    height: 35px !important;
+    right: 30%;
+    top: 92%;
+}
+
+.indexProductClick .swiper-container .swiper-button-prev2{
+    height: 35px !important;
+    left: 30%;
+    top: 92%;
+}
+
+.indexViewA{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.indexViewA a{
+    text-decoration: none;
+    display: inline-block;
+    width: 200px;
+    padding: 13px 35px;
+    border: 1px solid #5dc127;
+}
+
+.indexViewA a img{
+    margin-left: 18px;
+    margin-top: 4px;
+    float: left;
+}
+
+.indexViewA a span{
+    float: left;
+}
+
+.indexAboutDiv{
+    background:  #fff;
+    padding: 30px 22px;
+}
+
+.indexAboutDiv img{
+    max-width: 100% !important;
+}
+
+.indexAboutDiv p{
+    font-family: Regular;
+    line-height: 24px;
+    margin: 2% 0;
+    font-size: 14px;
+}
+
+.indexAboutDiv a{
+    position: relative;
+    display: inline-block;
+    color: #000;
+    font-size: 16px;
+    padding: 8px 70px 8px 41px;
+    margin: 4% 0;
+    text-decoration: none;
+    box-shadow: 0 0 3px #777;
+}
+
+.indexAboutDiv a img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.indexFooterText{
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.indexFooterText p{
+    color: #fff;
+    font-size: 12px;
+}
+
+.indexFooterFixed{
+    position: fixed;
+    bottom: 0;
+    width: 100% !important;
+    background:  #fff;
+    z-index: 999;
+}
+
+.indexFooterFixed a ul li:first-child{
+    height: 24px;
+}
+
+.indexFooterFixed a{
+    display: inline-block;
+    width: 25%;
+    height: 60px;
+    float: left;
+    border-right: 1px solid #fff;
+    text-align: center;
+    background: #14374b;
+    padding: 9px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.indexFooterFixed a:last-child{
+    border-right: none;
+}
+
+.indexFooterFixed .indexFooterFixedText{
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.indexFooterFixed ul{
+    list-style: none;
+}
+
+.indexFooterFixed a img{
+    width: 23px;
+}
+
+.indexFooterFixedAction{
+    background: #52b33b !important;
+}
+
+.indexTopCLick{
+    position: fixed;
+    bottom: 112px;
+    right: 0;
+    display: none;
+    z-index: 999;
+}
+
+.mm-navbar a{
+    color: #506876 !important;
+}
+
+.mm-listview a{
+    color: #fff !important;
+    padding: 15px 10px 15px 30px !important;
+}
+
+/*mm-opened*/
+
+.mm-listview .mm-next{
+    height: 50px !important;
+}
+
+
+.mm-listviewActive{
+    background: #329122 !important;
+}
+
+
+
+
+/**************
+**************Product页面
+***************/
+
+.productTopImg img{
+    max-width: 100% !important;
+}
+
+.productTextTop{
+    margin-top: -2px;
+    background: #fff;
+    padding: 10px 0;
+}
+
+.productTextTopP{
+    width: 150px;
+    margin: 0 auto;
+}
+
+.productTextTopP p,
+.productTextTopP h2{
+    float: left;
+}
+
+.productTextTopP h2{
+    position: relative;
+    top: 11px;
+}
+
+.productTwoAClick{
+    padding: 0 1% 0 1.8%;
+    background: #efefef;
+    overflow: hidden;
+    zoom: 1;
+}
+
+@media screen and (max-width: 370px) {
+    .productTwoAClick {
+        padding: 0 1% 0 1.8% !important;
+        background: #efefef !important;
+        padding-top: 3% !important;
+        overflow: hidden !important;
+        zoom: 1 !important;
+    }
+    .productTwoAClick a {
+        color: #000 !important;
+        text-decoration: none !important;
+        border: 1px solid #224f6d !important;
+        display: inline-block !important;
+        width: 47% !important;
+        height: 15px !important !important;
+        overflow: hidden !important;
+        /* margin: 0 1%; */
+        margin-right: 1% !important;
+        font-size: 12px !important;
+        padding: 10px 2px !important;
+        text-align: center !important;
+        /* margin: .4%; */
+        margin-bottom: 1.5% !important;
+        /* float: left; */
+    }
+    .productTwoAClick a:nth-child(2), .productTwoAClick a:nth-child(5) {
+        margin: 0 !important;
+        margin-bottom: 2% !important;
+    }
+}
+
+.productTwoAClickActive{
+    background: #5bc433;
+    color: #fff !important;
+    border: 1px solid transparent !important;
+}
+
+.productTwoAClick a:nth-child(2),
+.productTwoAClick a:nth-child(5){
+    margin: 0 2%;
+}
+
+.productTwoAClick a{
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #224f6d;
+    display: inline-block;
+    width: 30%;
+    height: 15px !important;
+    overflow: hidden;
+    /*margin: 0 1%;*/
+    font-size: 12px;
+    padding: 10px 2px;
+    text-align: center;
+    /*margin: .4%;*/
+    margin-bottom: 1.5%;
+    float: left;
+}
+
+.productTwoAClick a span{
+    display: inline-block;
+    width: 100%;
+    height: 16px;
+    line-height: 16px;
+    /*display: -webkit-box;*/
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+
+}
+
+.productList{
+    background: #efefef;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.productListDivs{
+    width: 48%;
+    text-align: center;
+    border: 2px solid #c7c9dc;
+    padding: 2%;
+    box-sizing: border-box;
+    background: #fff;
+    float: left;
+    margin: 1%;
+}
+
+.productListDivs h2{
+    font-size: 13px;
+    margin: 5% 0;
+    width: 100%;
+    height: 16px;
+    line-height: 16px;
+    /* display: -webkit-box; */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.productListDivs img{
+    max-width: 100% !important;
+}
+
+.productListDivs a {
+    display: inline-block;
+    max-width: 100%;
+    height: 160px;
+}
+
+.productListDivs p{
+    text-align: left;
+    font-size: 13px;
+    line-height: 17px;
+    width: 100%;
+    height: 54px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+/*分页标签*/
+.pagingClick{
+    background: #efefef;
+    padding: 6% 0 10% 0;
+}
+
+.pagingClickUl{
+    overflow: hidden;
+    zoom: 1;
+    list-style: none;
+}
+
+.pagingClickUl li a{
+    display: inline-block;
+    background: #14374b;
+    color: #fff;
+    width: 37px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+}
+
+.pagingClickUl li a span{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: #43a42d;
+}
+
+.list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.list-inline>li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+
+
+/********
+*************产品详情页面
+*********/
+.productDetailBanner{
+    background: #fff;
+}
+
+.productDetailBanner img{
+    max-width: 100% !important;
+}
+
+.productDetailBanner .swiper-button-next,
+.productDetailBanner .swiper-button-prev{
+    background-image: none;
+    width: 32px !important;
+    height: 32px !important;
+}
+
+.productDetailTextConter{
+    padding: 0 3%;
+    box-sizing: border-box;
+    line-height: 25px;
+    background: #fff;
+}
+
+.productDetailTextConter h2{
+    color: #51b23a;
+    font-size: 25px;
+    margin: 2% 0;
+}
+
+.productDetailTextConter h4{
+    margin: 2% 0;
+}
+
+.productDetailTextConter p{
+    font-size: 13px;
+    word-wrap: break-word;
+}
+
+.productDetailTextConterTwo{
+    overflow: hidden;
+    zoom: 1;
+}
+
+.productDetailTextConterOne,
+.productDetailTextConterTwo{
+    border-bottom: 1px dashed #919191;
+    padding: 5% 0;
+}
+
+.productDetailTextConterTwoLeft,
+.productDetailTextConterTwoRight{
+    float: left;
+}
+
+.productDetailTextConterTwoLeft{
+    width: 60%;
+}
+
+.productDetailTextConterTwoRight{
+    width: 40%;
+}
+
+.productDetailTextConterTwoRight img{
+    max-width: 100% !important;
+}
+
+.productDetailTextConterImg{
+    padding: 5% 0;
+}
+
+.productDetailTextConterImg img{
+    max-width: 100% !important;
+}
+
+/*更多商品*/
+.productDetailMoreP{
+    padding: 15px;
+    background: #224f6d;
+}
+
+.productDetailMorePH2{
+    border-left: 4px solid #43a42d;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.productDetailMoreProduct{
+    background: #fff;
+    padding: 3%;
+    box-sizing: border-box;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.productDetailMoreProductOne{
+    width: 31%;
+    float: left;
+    margin: 1.2%;
+}
+
+.productDetailMoreProductOne:last-child{
+    margin-right: 0;
+}
+
+.productDetailMoreProductOne img{
+    max-width: 100% !important;
+    height: auto;
+    display: inline-block;
+}
+
+.productDetailMoreProductOne a{
+    border: 1px solid #e2e2e2;
+    display: inline-block;
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.productDetailMoreProductOne p{
+    font-size: 12px;
+    line-height: 20px;
+    width: 100%;
+    height: 59px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+/**************
+**************about页面
+***************/
+
+.aboutUsContact{
+    text-align: center;
+    padding: 3%;
+    background: #fff;
+    display: block !important;
+}
+
+.aboutUsContact table,
+.aboutUsContact table tbody,
+.aboutUsContact table tbody tr,
+.aboutUsContact table tbody tr td{
+    width: 100%;
+    display: block !important;
+}
+
+.aboutUsContact h2{
+    margin: 2% 0;
+    font-size: 14px;
+}
+
+.aboutUsContact img{
+    max-width: 100%;
+}
+
+.aboutUsContact p{
+    text-align: left;
+    line-height: 24px;
+    font-size: 13px;
+    margin: 2% 0;
+    display: block;
+    word-wrap:break-word;
+}
+
+/**************
+**************contact页面
+***************/
+
+.contactForm{
+    background: #fff;
+    padding: 3%;
+    box-sizing: border-box;
+}
+
+.contactForm01,
+.contactForm02{
+    width: 50%;
+}
+
+.contactForm03,
+.contactForm04,
+.contactForm05,
+.contactForm06{
+    width: 100%;
+}
+
+.contactForm form{
+    overflow: hidden;
+    zoom: 1;
+    box-sizing: border-box;
+}
+
+.contactForm .form-line01{
+    float: left;
+    box-sizing: border-box;
+    padding: 2%;
+}
+
+.contactForm input,
+.contactForm textarea{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+    font-family: inherit;
+    color: #7b8a97;
+    background: #f6f8f9;
+    border-radius: 3px;
+}
+
+.contactForm01 input,
+.contactForm02 input{
+    padding: 6% 4%;
+}
+
+.contactForm03 input,
+.contactForm04 textarea{
+    padding: 3% 2%;
+}
+
+.contactForm05 input{
+    background: #52b33b;
+    color: #fff;
+    padding: 3% 0;
+    outline: none;
+    border: none;
+}
+
+.contactTextDiv{
+    background: #fff;
+    padding: 3% 5% 6% 5%;
+}
+
+.contactTextDiv p{
+    font-size: 13px;
+    font-family: Regular;
+    padding: 2% 0;
+    line-height: 20px;
+    border-bottom: 1px dashed #e5e5e5;
+}
+
+.thankContact{
+    background: #fff;
+    padding: 8%;
+}
+
+.thankContact .thankContactUl{
+    overflow: hidden;
+    zoom: 1;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.thankContact .thankContactUl h2{
+    margin: 2% 0;
+}
+
+.thankContact .thankContactUl p{
+    line-height: 24px;
+    font-size: 13px;
+    color: #7e7f84;margin-bottom: 4%;
+}
+
+.thankContact .thankContactUl img{
+    max-width: 100% !important;
+}
+
+.thankContact .thankContactUl li{
+    float: left;
+}
+
+.thankContact .thankContactUl .thankContactUlLiOne{
+    width: 10%;
+}
+
+.thankContact .thankContactUl .thankContactUlLiTwo{
+    width: 90%;
+    box-sizing: border-box;
+    padding-left: 4%;
+}

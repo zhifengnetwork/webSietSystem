@@ -1,0 +1,113 @@
+ <!-- 内容 -->
+    <div class="content">
+        <!-- 顶部图片-->
+        <div class="productTopImg">
+             {if $Categorys[$bcid][image]}<img src="{$Categorys[$bcid][image]}" alt="banner">{else}<img src="__PUBLIC__/wap/image/topBg.jpg" alt=""/>{/if}
+        </div>
+
+        <!-- 页面标题-->
+        <div class="productTextTop clearfix">
+            <div class="productTextTopP clearfix">
+                <p>
+                    <img src="__PUBLIC__/wap/image/productH.png" alt=""/>
+                </p>
+                <h2>Inquire Now</h2>
+            </div>
+        </div>
+
+        <!-- 表单-->
+        <div class="contactForm">
+            <form name="form" method="post" action="index.php?g=Home&a=message" onSubmit="return beforeSubmit2(this);" id="user_form2">
+                <div class="form-line01 contactForm01">
+                    <input type="text" name="name" placeholder="Your Name">
+                </div>
+                <div class="form-line01 contactForm02">
+                    <input type="text" name="phone" placeholder="Telephone">
+                </div>
+                <div class="form-line01 contactForm03">
+                    <input type="text" name="email" placeholder="Email Address">
+                </div>
+                <div class="form-line01 contactForm04">
+                    <textarea name="message" placeholder="Your Message"  rows="7"></textarea>
+                </div>
+                <div class="form-line01 contactForm05">
+                    <input id="form_submit" type="submit" value="Submit Now" form="user_form2">
+                </div>
+            </form>
+        </div>
+
+
+        <div class="contactTextDiv">
+         
+                <p>{$name}</p>
+
+                <p>Address：{$address}</p>
+
+                <p>Domestic market：{$domestic_market}</p>
+
+                <p class="contactUsBorderB">Contact QQ：{$contact_qq}</p>
+
+                <p>International Market：{$international_market}</p>
+
+                <p>Contact Skype：{$contact_skype}</p>
+
+                <p  class="contactUsBorderB"> Domestic Fax：{$domestic_fax}</p>
+
+                <p>International Fax：{$international_fax}</p>
+
+                <p>E-mail：{$email}</p>
+
+        </div>
+
+    </div>
+
+
+
+<!--这些js只有cintact页面才用得到，不需要加到其他页面-->
+<script>
+    function beforeSubmit2(form){
+		
+		var submitcount2=0;
+
+        if(form.name.value==''){
+            alert('Name can not be empty');
+            form.name.focus();
+            return false;
+        }else if(form.phone.value==''){
+            alert('The phone can not be empty');
+            form.phone.focus();
+            return false;
+        }else if(form.phone.value.length < 6){
+            alert('The phone is wrong');
+            form.phone.focus();
+            return false;
+        }else if(form.email.value==''){
+            alert('Please enter the correct email format');
+            form.email.focus();
+            return false;
+        }else if(form.email.value.indexOf('@')<0){
+            alert('The email is wrong');
+            form.email.focus();
+            return false;
+        }else if(form.message.value==''){
+            alert('Need message');
+            form.message.focus();
+            return false;
+        }else if(form.message.value.length<32){
+            alert('Please fill in more detail');
+            form.message.focus();
+            return false;
+        }else{
+
+            if (submitcount2 == 0){
+                submitcount2++;
+                return true;
+            } else{
+                alert("Message is being sent, please wait!");
+                return false;
+
+            }
+        }
+
+    }
+</script>

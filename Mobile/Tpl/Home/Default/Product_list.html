@@ -1,0 +1,52 @@
+ <!-- 内容 -->
+    <div class="content">
+        <!-- 顶部图片-->
+        <div class="productTopImg">
+           {if $Categorys[$bcid][image]}<img src="{$Categorys[$bcid][image]}" alt="banner">{else} <img src="__PUBLIC__/wap/image/topBg.jpg" alt=""/>{/if}
+           
+        </div>
+
+        <!-- 页面标题-->
+        <div class="productTextTop clearfix">
+            <div class="productTextTopP clearfix">
+                <p>
+                    <img src="__PUBLIC__/wap/image/productH.png" alt=""/>
+                </p>
+                <h2>PRODUCTS</h2>
+            </div>
+        </div>
+
+        <!-- 产品分类列表-->
+        <div class="productTwoAClick clearfix">
+            <!-- a按钮中class有名productTwoAClickActive的为被选中与当前页面-->
+                <YP:subcat catid="$bcid">
+                  <a href="{$r.url}" {if $catid==$r[id]}class="productTwoAClickActive"{/if}><span>{$r.catname}</span></a>
+                </YP:subcat>
+        </div>
+
+        <!-- 产品列表-->
+        <div class="productList clearfix">
+            <!-- 产品一-->
+             <volist name="list" id="r" listorder="desc">
+            <div class="productListDivs">
+                <h2>{$r.title}</h2>
+                <a href="{$r.url}"><img src="{$r.thumb}" alt="{$r.title}"/></a>
+                <p>{$r.description}</p>
+            </div>
+             </volist>
+           
+            
+            
+            
+        </div>
+
+        <!--分页按钮-->
+        <div class="pagingClick">
+            <ul class="pagingClickUl clearfix list-inline text-center">
+                <li>
+                    {$pages}
+                </li>      
+            </ul>
+        </div>
+
+    </div>

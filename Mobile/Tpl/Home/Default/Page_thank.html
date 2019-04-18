@@ -1,0 +1,65 @@
+ <!-- 内容 -->
+    <div class="content">
+        <!-- 顶部图片-->
+        <div class="productTopImg">
+              {if $Categorys[$bcid][image]}<img src="{$Categorys[$bcid][image]}" alt="banner">{else}<img src="__PUBLIC__/wap/image/topBg.jpg" alt=""/>{/if}
+        </div>
+
+        <!-- 页面标题-->
+        <div class="productTextTop clearfix">
+            <div class="productTextTopP clearfix">
+                <p>
+                    <img src="__PUBLIC__/wap/image/productH.png" alt=""/>
+                </p>
+                <h2>THANK YOUR</h2>
+            </div>
+        </div>
+
+        <!-- 联系方式-->
+        <div class="thankContact">
+            <ul class="thankContactUl">
+                <li class="thankContactUlLiOne">
+                    <img src="__PUBLIC__/wap/image/m-thank_01.jpg" alt=""/>
+                </li>
+                <li class="thankContactUlLiTwo">
+                    <h2>Company</h2>
+                    <p>{$name}</p>
+                </li>
+            </ul>
+
+            <ul class="thankContactUl">
+                <li class="thankContactUlLiOne">
+                    <img src="__PUBLIC__/wap/image/m-thank_02.jpg" alt=""/>
+                </li>
+                <li class="thankContactUlLiTwo">
+                    <h2>Phone</h2>
+                    <p>{$phone}</p>
+                </li>
+            </ul>
+
+            <ul class="thankContactUl">
+                <li class="thankContactUlLiOne">
+                    <img src="__PUBLIC__/wap/image/m-thank_03.jpg" alt=""/>
+                </li>
+                <li class="thankContactUlLiTwo">
+                    <h2>Email</h2>
+                    <p>{$email}</p>
+                </li>
+            </ul>
+
+            <ul class="thankContactUl">
+                <li class="thankContactUlLiOne">
+                    <img src="__PUBLIC__/wap/image/m-thank_04.jpg" alt=""/>
+                </li>
+                <li class="thankContactUlLiTwo">
+                    <h2>Address</h2>
+                    <p>{$address}</p>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+
+    </div>
