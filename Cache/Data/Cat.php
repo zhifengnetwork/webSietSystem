@@ -1,1 +1,0 @@
-<?php	return array ( 'Mobileflipcharteasel' => '94', 'Mobileglassboard' => '95', 'Mobilewhiteboard' => '96', 'BulletinBoard' => '102', 'Magneticwhiteboard' => '104', 'product' => '73', 'about' => '74', 'Highlight' => '77', 'contact' => '78', 'thanks' => '103', );?>
